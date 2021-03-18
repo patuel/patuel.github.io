@@ -1,1 +1,49 @@
-Hello World
+<html>
+    <head>
+        <title>:'D</title>
+
+        <meta charset="utf-8">
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="animation.js" defer></script>
+        <script src="app.js" defer></script>
+
+        <style>
+            :root {
+                color-scheme: light dark; /* both supported */
+            }
+
+            body {
+                margin: 0; 
+                padding: 0;
+                overflow: hidden;
+            }
+
+            #app {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            input {
+                padding: .3em;
+                margin-left: 1vmin;
+                margin-top: 1vmin;
+                font-size: 3em;
+                width: 2em;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background: #333;   
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <canvas></canvas>
+        <div id="app">
+            <input type="text" v-model="selected" value="❤️" />
+        </div>
+    </body>
+</html>
